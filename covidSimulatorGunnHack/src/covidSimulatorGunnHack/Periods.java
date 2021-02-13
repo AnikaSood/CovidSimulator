@@ -18,15 +18,10 @@ public class Periods {
 		
 		}
 	    
-	    System.out.println(b[0][0] * curr[0][0]);
-	    System.out.println(b[0][0] * curr[0][1]);
-	    System.out.println(b[0][0] * curr[0][2]);
-	    
 		for(int i = 0; i < 4; i++) {
 			c[i] = 	b[0][0] * curr[0][i] + b[0][1] * curr[1][i] 
 					+ b[0][2] * curr[2][i] + b[0][3] * curr[3][i];
-			System.out.println("c[i]" + c[i]);
 		}
-		return c; //pretty straightforward
+		return c; //After "periods" month how many people are infected/recovered/dead/not infected
 	}	
 }

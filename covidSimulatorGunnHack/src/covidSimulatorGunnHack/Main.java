@@ -62,16 +62,21 @@ public class Main {
 		transition[2][2] = 1.0; //possibility of people who are recovered to get recovered. END STATE. recovered don't change status
 		transition[3][3] = 1.0; //possibility of dead people to die. END STATE. dead don't resurrect
 		
-		System.out.println(transition);
-		for (int i = 0; i < transition.length; ++i) {
-            for(int j = 0; j < transition[i].length; ++j) {
-                System.out.println(transition[i][j]);
-            }
-        }
+		System.out.println("Unaffected: ");
+		System.out.println("Infected: ");
+		System.out.println("Vaccinated: ");
+		System.out.println("Recovered: ");
+		System.out.println("Dead: ");
+		
+		
+	
+		
 		
 		Periods p = new Periods(); //Periods object initiate so that we can call
 		p.perCalc(periods); //perCalc of "overview", "transition", multiplied for number of periods
-				
+		
+		Vaccination v = new Vaccination();
+		v.Vacc(Overview, transition, periods, vaccProp);
 	}
 
 }
