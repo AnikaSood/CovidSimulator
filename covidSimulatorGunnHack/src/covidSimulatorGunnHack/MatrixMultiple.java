@@ -3,9 +3,15 @@ package covidSimulatorGunnHack;
 public class MatrixMultiple {
 
 	
-	public double[][] MatrixMult (double[][] a, double[][] b) {
-		
+	//public double[][] MatrixMult (double[][] a, double[][] b) {
+	  public double [][] MatrixMult (double[][] a) {
+	
 		double[][] transCopy = Main.transition;
+		
+		//a = new double[1][4];
+	    a = new double [4][4];
+		double [][] b = new double [4][4];
+		
 		
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 3; j++) {
@@ -22,12 +28,6 @@ public class MatrixMultiple {
 			}
 		}
 		
-		for(int i = 0; i < 3; i++) {
-			for(int j=0; j < 3; j++) {
-				a[i][j] = b[i][j];
-			}
-		}
-			
-		return a;
+		return b;
 	}
 }
