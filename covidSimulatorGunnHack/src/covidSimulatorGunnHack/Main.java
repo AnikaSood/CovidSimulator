@@ -3,6 +3,14 @@ import java.util.Scanner;
 
 public class Main {
 	
+	/*
+	 * App option: calc when will covid end, how many ppl are 
+	 * dead after period, how many ppl are in (all states after periods),
+	 *  possibility of getting surviving/dying after vaccine
+	 */
+	
+	
+	
 	public static double[][] transition;
 	
 	public Main() {
@@ -11,6 +19,7 @@ public class Main {
 	
 	public static void main(String[] Args) {
 		
+		//s
 		Scanner sc = new Scanner(System.in);
 		
 		//Get user input: 
