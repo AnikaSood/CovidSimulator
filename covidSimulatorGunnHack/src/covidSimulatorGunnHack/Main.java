@@ -22,7 +22,7 @@ public class Main {
 		//Get user input: 
 		System.out.println("What is the infected population (# of people)?");
 		double newConfPop = sc.nextDouble(); //conf (confirmed cases)
-		System.out.println("What is the average numeber of people who recover monthly?");
+		System.out.println("What is the average number of people who recover monthly?");
 		double newRecovPop = sc.nextDouble();
 		System.out.println("What is the average number of people that died monthly?");
 		double newDeadPop = sc.nextDouble();
@@ -62,21 +62,21 @@ public class Main {
 		transition[2][2] = 1.0; //possibility of people who are recovered to get recovered. END STATE. recovered don't change status
 		transition[3][3] = 1.0; //possibility of dead people to die. END STATE. dead don't resurrect
 		
-		System.out.println("Unaffected: ");
-		System.out.println("Infected: ");
-		System.out.println("Vaccinated: ");
-		System.out.println("Recovered: ");
-		System.out.println("Dead: ");
-		
-		
-	
-		
 		
 		Periods p = new Periods(); //Periods object initiate so that we can call
-		p.perCalc(periods); //perCalc of "overview", "transition", multiplied for number of periods
+		double[] postPerCalc = p.perCalc(periods); //perCalc of "overview", "transition", multiplied for number of periods
 		
 		Vaccination v = new Vaccination();
-		v.Vacc(Overview, transition, periods, vaccProp);
+		double[] postVacc = v.Vacc(Overview, transition, periods, vaccProp);
+		
+		
+		System.out.println("\n" + periods + " MONTHS PASSED... \n");
+		System.out.println("Unaffected: " + postPerCalc[0]);
+		System.out.println("Infected: " + postPerCalc[1]);
+		System.out.println("Vaccinated: " + postVacc[0]);
+		System.out.println("Recovered: " + postPerCalc[2]);
+		System.out.println("Dead: " + postPerCalc[3]);
+
 	}
 
 }

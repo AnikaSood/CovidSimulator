@@ -9,8 +9,8 @@ public class Vaccination {
 		Periods p = new Periods();
 		double[] finMatrix = p.perCalc(periods);
 		
-		finMatrix[1] = finMatrix[1] * trend;
-		finMatrix[0] = 1 - finMatrix[1];
+		finMatrix[1] = finMatrix[1] * trend; //unvacc
+		finMatrix[0] = 1 - finMatrix[1]; //vacc
 		
 		return finMatrix; //return 1 * 4 matrix
 	}	
