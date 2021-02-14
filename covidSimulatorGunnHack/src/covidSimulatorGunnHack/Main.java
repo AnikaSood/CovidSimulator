@@ -76,6 +76,9 @@ public class Main {
 		System.out.println("Vaccinated: " + postVacc[0]);
 		System.out.println("Recovered: " + postPerCalc[2]);
 		System.out.println("Dead: " + postPerCalc[3]);
+		
+		//Period
+		//Vaccinations 
 
 	}
 
