@@ -61,15 +61,26 @@ public class Main {
 		transition[1][3] = newDeadPop/newConfPop;
 		transition[2][2] = 1.0; //possibility of people who are recovered to get recovered. END STATE. recovered don't change status
 		transition[3][3] = 1.0; //possibility of dead people to die. END STATE. dead don't resurrect
+		//notInfectedPercent newlyInfectedPercent 
+		//NULL NULL 
 		
+
 		
+		//begin loop
+		//Period
+		//Vaccinations 
 		Periods p = new Periods(); //Periods object initiate so that we can call
 		double[] postPerCalc = p.perCalc(periods); //perCalc of "overview", "transition", multiplied for number of periods
-		
+		System.out.println("stats for period class"+ postPerCalc);
 		Vaccination v = new Vaccination();
 		double[] postVacc = v.Vacc(Overview, transition, periods, vaccProp);
 		
-		
+		//prints the stats for each period
+		// calculate the vaccine percentage and period stats for each period
+		//this means calling the period and vaccine class every time
+		//for (int period = 0; period < periods; period++) {
+	//}
+		//postPerCalc = p.perCalc();
 		System.out.println("\n" + periods + " MONTHS PASSED... \n");
 		System.out.println("Unaffected: " + postPerCalc[0]);
 		System.out.println("Infected: " + postPerCalc[1]);
@@ -77,8 +88,6 @@ public class Main {
 		System.out.println("Recovered: " + postPerCalc[2]);
 		System.out.println("Dead: " + postPerCalc[3]);
 		
-		//Period
-		//Vaccinations 
 
 	}
 

@@ -1,6 +1,6 @@
 package covidSimulatorGunnHack;
 
-public class MatrixMultiple {
+public class MatrixMultiple{
 
 	
 	//public double[][] MatrixMult (double[][] a, double[][] b) {
@@ -9,16 +9,21 @@ public class MatrixMultiple {
 		double[][] transCopy = Main.transition;
 		
 		//a = new double[1][4];
-	    a = new double [4][4];
 		double [][] b = new double [4][4];
 		
-		
+		/*
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 3; j++) {
 				a[i][j] = transCopy[i][j];
 			}
 		}
+		*/
+		//dead, infected, vaccinated, not infected
+		//
 		
+		//infected -> dead or recovered
+		//not infected -> infected, not infected ,or vaccinated
+		//vaccinated -> infected, vaccinated 
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 3; j++) {
 				b[i][j] = 	a[i][0] * transCopy[0][j] +

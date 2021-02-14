@@ -12,11 +12,12 @@ public class Periods {
 	    double [][] overviewb = Main.Overview;
 	    double [] c = new double [4];
 	    double [][] curr = new double [4][4];
-	    for(int i = 0; i < periods; i++) { 
+	    for(int i = 0; i < periods - 1; i++) { 
 			//curr = obj.MatrixMult(curr, b); //first runthru will have a*b, all following runthrus will have (a*b)*b how ever many times it shall (c)
-			curr = obj.MatrixMult(atrans);
+	    	curr = obj.MatrixMult(atrans);
+	    	atrans = curr;
+	    }
 		
-		}
 	    
 		for(int i = 0; i < 4; i++) {
 			c[i] = 	overviewb[0][0] * curr[0][i] + overviewb[0][1] * curr[1][i] 
